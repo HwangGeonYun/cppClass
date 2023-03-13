@@ -1,0 +1,10 @@
+# ninja log v5
+2	226	7003833446580550	build.ninja	8ce18ca910c2dc58
+4	449	7003266022365908	CMakeFiles/untitled.dir/main.cpp.obj	2ac19f352506575e
+449	582	7003266023636364	untitled.exe	8d481484b4e82ab5
+5	75	6998812085304502	CMakeFiles/untitled.dir/auto.cpp.obj	86454f2010e1be6d
+7	80	7001507129141158	CMakeFiles/untitled.dir/remove.cpp.obj	829f38d34899f7b4
+4	61	7001272030202962	CMakeFiles/untitled.dir/smart_pointer.cpp.obj	60bb0c019b9b172
+6	100	6998818657578969	CMakeFiles/untitled.dir/reference_variable.cpp.obj	1d351356b88d961d
+4	76	7001479414654579	CMakeFiles/untitled.dir/sort.cpp.obj	804dc54c57bc545e
+4	67	7003212566021365	CMakeFiles/untitled.dir/enum_class.cpp.obj	7b6ea70fa3a40165
