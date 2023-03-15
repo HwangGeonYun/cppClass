@@ -1,6 +1,4 @@
-/*#include <iostream>
-//#include <vector>
-//#include <memory>
+#include <iostream>
 
 using namespace std;
 
@@ -51,13 +49,13 @@ int main() {
                 for(int i = 0;i<item_count-1;i++)
                     itemList[i] = cart[i];
                 delete[](cart);
-            }
+            }*/
 
           /* if(cart!=nullptr){
                for(int i = 0;i<item_count-1;i++)
                    memcpy(&itemList[i], &cart[i], sizeof(itemList[i]));
                delete[](cart);
-           }
+           }*/
 
             if(cart!=nullptr){
                 memcpy(itemList, cart, sizeof(Item)*(item_count-1));
@@ -113,13 +111,13 @@ int main() {
             item_count--;
 
             for(int i = 0;i<item_count;i++){
-                if(cart[i].id != i){
+                if(itemList[i].id != i){
                     itemList[i].id--;
                 }
             }
 
             //memcpy(itemList, cart, item_count-1);
-            delete[](cart);
+            //delete[](cart);
 
             cart = itemList;
 
@@ -134,7 +132,7 @@ int main() {
 
             /*for(int i = 0;i< *lastItemPosition;i++){
                 cout << cart[i].name;
-            }
+            }*/
         }
 
         else if(choice == 3){
@@ -166,6 +164,10 @@ int main() {
         }
 
         else {
+            if(cart != nullptr) {
+                delete[] cart;
+            }
+
             break;
         }
     }
@@ -173,4 +175,3 @@ int main() {
     return 0;
 }
 
-*/
