@@ -97,6 +97,30 @@ build CMakeFiles/untitled.dir/cart.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
+build CMakeFiles/untitled.dir/enum_type.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/enum_type.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\enum_type.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
+build CMakeFiles/untitled.dir/while_vector.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/while_vector.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\while_vector.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
+build CMakeFiles/untitled.dir/for_map.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/for_map.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\for_map.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
+build CMakeFiles/untitled.dir/iterator_without_for.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/iterator_without_for.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\iterator_without_for.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -105,7 +129,7 @@ build CMakeFiles/untitled.dir/cart.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Use
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/smart_pointer.cpp.obj CMakeFiles/untitled.dir/auto.cpp.obj CMakeFiles/untitled.dir/reference_variable.cpp.obj CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/sort.cpp.obj CMakeFiles/untitled.dir/remove.cpp.obj CMakeFiles/untitled.dir/enum_class.cpp.obj CMakeFiles/untitled.dir/cart.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/smart_pointer.cpp.obj CMakeFiles/untitled.dir/auto.cpp.obj CMakeFiles/untitled.dir/reference_variable.cpp.obj CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/sort.cpp.obj CMakeFiles/untitled.dir/remove.cpp.obj CMakeFiles/untitled.dir/enum_class.cpp.obj CMakeFiles/untitled.dir/cart.cpp.obj CMakeFiles/untitled.dir/enum_type.cpp.obj CMakeFiles/untitled.dir/while_vector.cpp.obj CMakeFiles/untitled.dir/for_map.cpp.obj CMakeFiles/untitled.dir/iterator_without_for.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir

@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -45,17 +45,7 @@ int main() {
 
             Item* itemList = new Item[++item_count];
 
-            /*if(cart!=nullptr) {
-                for(int i = 0;i<item_count-1;i++)
-                    itemList[i] = cart[i];
-                delete[](cart);
-            }*/
 
-          /* if(cart!=nullptr){
-               for(int i = 0;i<item_count-1;i++)
-                   memcpy(&itemList[i], &cart[i], sizeof(itemList[i]));
-               delete[](cart);
-           }*/
 
             if(cart!=nullptr){
                 memcpy(itemList, cart, sizeof(Item)*(item_count-1));
@@ -130,9 +120,7 @@ int main() {
 
             cout << "Item deleted successfully" << endl;
 
-            /*for(int i = 0;i< *lastItemPosition;i++){
-                cout << cart[i].name;
-            }*/
+
         }
 
         else if(choice == 3){
@@ -174,4 +162,4 @@ int main() {
 
     return 0;
 }
-
+*/
