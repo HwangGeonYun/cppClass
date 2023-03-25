@@ -1,7 +1,7 @@
 //
 // Created by ghkdw on 2023-03-15.
 //
-
+/*
 #include <iostream>
 #include <vector>
 #include <iterator>
@@ -20,4 +20,4 @@ int main(){
 
     std::copy(vec.begin(), vec.end(), cout_iter);
     return 0;
-}
+}*/

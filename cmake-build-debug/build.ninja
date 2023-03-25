@@ -67,8 +67,8 @@ build CMakeFiles/untitled.dir/reference_variable.cpp.obj: CXX_COMPILER__untitled
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
-build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/main.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles\untitled.dir\main.cpp.obj.d
+build CMakeFiles/untitled.dir/electric_car.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/electric_car.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\electric_car.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
@@ -121,6 +121,24 @@ build CMakeFiles/untitled.dir/iterator_without_for.cpp.obj: CXX_COMPILER__untitl
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
+build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/main.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
+build CMakeFiles/untitled.dir/control.cpp.obj: CXX_COMPILER__untitled_Debug C$:/Users/ghkdw/CLionProjects/CppHomeWork/control.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\control.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+
+build CMakeFiles/untitled.dir/C_/Users/ghkdw/AppData/Roaming/JetBrains/CLion2022.3/plugins/activity-tracker/hello.c.obj: C_COMPILER__untitled_Debug C$:/Users/ghkdw/AppData/Roaming/JetBrains/CLion2022.3/plugins/activity-tracker/hello.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\C_\Users\ghkdw\AppData\Roaming\JetBrains\CLion2022.3\plugins\activity-tracker\hello.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\C_\Users\ghkdw\AppData\Roaming\JetBrains\CLion2022.3\plugins\activity-tracker
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -129,7 +147,7 @@ build CMakeFiles/untitled.dir/iterator_without_for.cpp.obj: CXX_COMPILER__untitl
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/smart_pointer.cpp.obj CMakeFiles/untitled.dir/auto.cpp.obj CMakeFiles/untitled.dir/reference_variable.cpp.obj CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/sort.cpp.obj CMakeFiles/untitled.dir/remove.cpp.obj CMakeFiles/untitled.dir/enum_class.cpp.obj CMakeFiles/untitled.dir/cart.cpp.obj CMakeFiles/untitled.dir/enum_type.cpp.obj CMakeFiles/untitled.dir/while_vector.cpp.obj CMakeFiles/untitled.dir/for_map.cpp.obj CMakeFiles/untitled.dir/iterator_without_for.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/smart_pointer.cpp.obj CMakeFiles/untitled.dir/auto.cpp.obj CMakeFiles/untitled.dir/reference_variable.cpp.obj CMakeFiles/untitled.dir/electric_car.cpp.obj CMakeFiles/untitled.dir/sort.cpp.obj CMakeFiles/untitled.dir/remove.cpp.obj CMakeFiles/untitled.dir/enum_class.cpp.obj CMakeFiles/untitled.dir/cart.cpp.obj CMakeFiles/untitled.dir/enum_type.cpp.obj CMakeFiles/untitled.dir/while_vector.cpp.obj CMakeFiles/untitled.dir/for_map.cpp.obj CMakeFiles/untitled.dir/iterator_without_for.cpp.obj CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/control.cpp.obj CMakeFiles/untitled.dir/C_/Users/ghkdw/AppData/Roaming/JetBrains/CLion2022.3/plugins/activity-tracker/hello.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir

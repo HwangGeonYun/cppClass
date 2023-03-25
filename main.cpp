@@ -1,176 +1,84 @@
-/*#include <iostream>
-//#include <vector>
-//#include <memory>
+//
+// Created by ghkdw on 2023-03-17.
+//
+/*
+#include <iostream>
+#include <map>
+#include <limits>
 
 using namespace std;
+int main(){
+    const double kWhClock = 0.1;
 
-struct Item {
-    int id;
-    std::string name;
-    int quantity;
-    int price;
-};
+    double currentBatteryCaphacity;
+    double distancePerkWh;
+    double ratioOfOfBatteryCaphacity;
+    double distanceToGoal;
+    double goToWayPointNow = false;
 
-int main() {
-
-    int item_count = 0;
-
-    Item *cart = nullptr;
+    const std::map<int, string> wayPoint = {{100, "Gyeongsan"}, {200, "Gimcheon"}, {300, "Cheongju"}, {400, "Anseong"}};
 
 
+    cout << "배터리용량 전비 충전량(%) 목적지까지 거리\n";
+    cin >> currentBatteryCaphacity >> distancePerkWh
+        >> ratioOfOfBatteryCaphacity >> distanceToGoal;
 
-    while (true) {
+    double currentDistance = 0;
 
-        std::cout << "1. Add item" << std::endl;
+    const double firstBatteryCaphacity = currentBatteryCaphacity;
 
-        std::cout << "2. Delete item" << std::endl;
+    while(currentDistance < distanceToGoal){
+        int beforeRatio = ratioOfOfBatteryCaphacity / 10;
+        int beforeDistance = currentDistance /100;
 
-        std::cout << "3. View item details" << std::endl;
+        currentBatteryCaphacity -= 1 * kWhClock;
+        ratioOfOfBatteryCaphacity = (currentBatteryCaphacity/firstBatteryCaphacity)*100;
 
-        std::cout << "4. View total cost" << std::endl;
+        currentDistance += (distancePerkWh * kWhClock);
 
-        std::cout << "5. Quit" << std::endl;
+        int nextRatio = ratioOfOfBatteryCaphacity / 10;
+        int nextDistance = currentDistance / 100;
 
-        std::cout << "\tEnter your choice: ";
+        if((beforeRatio != nextRatio) && (beforeRatio != 10))
+            cout << beforeRatio * 10 << "%\n";
 
+        if(goToWayPointNow == true){
+            if(beforeDistance != nextDistance){
+                ratioOfOfBatteryCaphacity = 80;
+                currentBatteryCaphacity = (firstBatteryCaphacity/100)*ratioOfOfBatteryCaphacity;
+                if(distancePerkWh<0)
+                    distancePerkWh = - distancePerkWh;
 
+                ratioOfOfBatteryCaphacity -= 6;
+                currentBatteryCaphacity = (ratioOfOfBatteryCaphacity/100)*firstBatteryCaphacity;
 
-        // implement your code
-
-        int choice;
-
-
-        cin >> choice;
-        cin.ignore();
-
-        if(choice == 1){
-
-            Item* itemList = new Item[++item_count];
-
-            /*if(cart!=nullptr) {
-                for(int i = 0;i<item_count-1;i++)
-                    itemList[i] = cart[i];
-                delete[](cart);
+                goToWayPointNow = false;
             }
-
-          /* if(cart!=nullptr){
-               for(int i = 0;i<item_count-1;i++)
-                   memcpy(&itemList[i], &cart[i], sizeof(itemList[i]));
-               delete[](cart);
-           }
-
-            if(cart!=nullptr){
-                memcpy(itemList, cart, sizeof(Item)*(item_count-1));
-            }
-            cart = itemList;
-            //delete[](itemList);
-
-
-            string name; int quantity, price;
-
-            //std::string inputInfomation;
-            //std::getline(std::cin, inputInfomation);
-
-
-            cout <<"Enter item name:";
-            cin >> name;
-            cout <<"Enter item quantity:";
-            cin >> quantity;
-            cout <<"Enter item price:\t" ;
-            cin >> price;
-
-            //stringstream stream;
-            //stream.str(inputInfomation);
-
-            //stream >> name >> quantity >> price;
-
-            cart[item_count-1] = {item_count-1,name, quantity, price};
-
-            cout << "Item "<< cart[item_count-1].id << " added successfully"<< endl;
-
-        }
-
-        else if(choice == 2){
-
-            int deleteId;
-            cin >> deleteId;
-            cin.ignore();
-
-            if(cart==nullptr){
+            else
                 continue;
-            }
+        }
 
-            Item* itemList = new Item[item_count-1];
+        else if(ratioOfOfBatteryCaphacity<=20){
+            goToWayPointNow = true;
 
-            int l = 0;
-            for(int i = 0;i<item_count;i++) {
-                if(deleteId == cart[i].id)
-                    l = 1;
-                if(deleteId != cart[i].id)
-                    itemList[i-l] = cart[i];
-            }
+            auto wayPointIterator = wayPoint.begin();
+            pair<int, string> nearestWayPoint(0, "null");
+            int nearestWay = numeric_limits<int>::max();
+            while(wayPointIterator != wayPoint.end()){
+                int distanceWithPoint = wayPointIterator -> first - currentDistance;
 
-            item_count--;
-
-            for(int i = 0;i<item_count;i++){
-                if(cart[i].id != i){
-                    itemList[i].id--;
+                if(distanceWithPoint < 0)
+                    distanceWithPoint = -distanceWithPoint;
+                if(distanceWithPoint < nearestWay){
+                    nearestWayPoint.first = wayPointIterator->first;
+                    nearestWayPoint.second = wayPointIterator->second;
                 }
-            }
 
-            //memcpy(itemList, cart, item_count-1);
-            delete[](cart);
-
-            cart = itemList;
-
-            //cout << item_count;
-            //delete[](itemList);
-
-
-
-
-
-            cout << "Item deleted successfully" << endl;
-
-            /*for(int i = 0;i< *lastItemPosition;i++){
-                cout << cart[i].name;
+                wayPointIterator++;
             }
         }
 
-        else if(choice == 3){
-            int chooseItem;
-
-            cout << "Enter your choice: ";
-            cin >> chooseItem;
-
-            cout <<"Enter the Item number: ";
-
-            if(item_count<=chooseItem)
-                cout << "\tItem not found" <<endl;
-
-            else {
-                cout << "Item " << chooseItem << endl;
-
-                cout << "Name: " << (cart + chooseItem)->name << "\n"
-                     << "Quantity: " << (cart + chooseItem)->quantity << "\n"
-                     << "Price: " << (cart + chooseItem)->price << endl;
-            }
-        }
-
-        else if(choice == 4){
-            int sum = 0;
-            for(int i = 0;i<item_count;i++){
-                sum += cart[i].price*cart[i].quantity;
-            }
-            cout << "Total cost: " << sum << endl;
-        }
-
-        else {
-            break;
-        }
+        //cout <<"distance" << currentDistance << "ratio" << ratioOfBatteryCaphacity << "% battery" << currentBatteryCaphacity << "\n";
     }
-
     return 0;
-}
-
-*/
+}*/
