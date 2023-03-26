@@ -65,7 +65,10 @@
 				11,
 				12,
 				13,
-				14
+				14,
+				16,
+				17,
+				18
 			]
 		},
 		{
@@ -129,7 +132,10 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17,
+				18
 			]
 		},
 		{
@@ -235,6 +241,24 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "C:/Users/ghkdw/AppData/Roaming/JetBrains/CLion2022.3/plugins/activity-tracker/hello.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "function_overloading.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "stl_lambda.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "stl_lambda2.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
